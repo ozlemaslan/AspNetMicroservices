@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C055F59F-75C1-4E3B-BDFC-C60FFC6822E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{9FD8089E-50E5-4A70-A6A6-2EAA5530ED63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{14CFAE4A-39F0-4B79-A26E-CE5C21A2E8A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{14CFAE4A-39F0-4B79-A26E-CE5C21A2E8A8}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4353E5F5-6143-4379-8433-6896E87C0A95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,10 @@ Global
 		{14CFAE4A-39F0-4B79-A26E-CE5C21A2E8A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14CFAE4A-39F0-4B79-A26E-CE5C21A2E8A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14CFAE4A-39F0-4B79-A26E-CE5C21A2E8A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4353E5F5-6143-4379-8433-6896E87C0A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4353E5F5-6143-4379-8433-6896E87C0A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4353E5F5-6143-4379-8433-6896E87C0A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4353E5F5-6143-4379-8433-6896E87C0A95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
