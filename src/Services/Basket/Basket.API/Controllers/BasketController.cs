@@ -1,6 +1,5 @@
 ﻿using Basket.API.Entities;
 using Basket.API.Repositories.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
@@ -8,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Basket.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/v1/[controller]")]
     public class BasketController : ControllerBase
     {
         private readonly IBasketRepository _basketRepository;
@@ -19,11 +18,11 @@ namespace Basket.API.Controllers
             _basketRepository = basketRepository ?? throw new ArgumentNullException(nameof(basketRepository)); ;
         }
 
-        [HttpGet("{userName}",Name ="GetBasket")]
+        [HttpGet("{userName}", Name = "GetBasket")]
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> GetBasket(string userName)
         {
-            var basket=await _basketRepository.GetBasket(userName);
+            var basket = await _basketRepository.GetBasket(userName);
             return Ok(basket ?? new ShoppingCart(userName));
         }
 
@@ -35,7 +34,7 @@ namespace Basket.API.Controllers
         }
 
 
-        [HttpGet("{userName}", Name = "DeleteBasket")]
+        [HttpDelete("{userName}", Name = "DeleteBasket")]
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteBasket(string userName)
         {
